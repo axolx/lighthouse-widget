@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>LH</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <style type="text/css" title="AppleStyle">
+            @import "css/styles.css";
+        </style>
+    </head>
+    <body>
+        <div id="front">
+            <img id="logo" src="css/img/logo.png">
+            <div id="header">
+                <select id="choices" name="choices">
+                    <optgroup id="choices-optgroup" label="Bins">
+                    </optgroup>
+                </select>
+            </div>
+            <div id="content">
+                <div id="scrollBar"></div>
+            </div><!-- /#content -->
+            <div class="flip" id="reload"></div>
+            <div class="flip" id="info"></div>
+            <div class="flip" id="fliprollie"></div>
+        </div>
+        <!-- /#front -->
+        <div id="back">
+            <div id="content">
+                <div id="error"></div>
+                <form id="settings">
+                    <label for="subdomain">Subdomain</label>
+                    <input type="text" id="subdomain" name="subdomain" value="">
+                    <label for="apiKey">API Key</label>
+                    <input type="text" id="apiKey" name="apiKey" value="">
+                    <label for="bins">Bins</label>
+                    <textarea id="bins" name="bins" rows="5"></textarea>
+                </form>
+                <div id="done"></div>
+            </div><!-- /#content -->
+        </div>
+        <!-- /#back -->
+        <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleButton.js" charset="utf-8"></script>
+        <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleInfoButton.js" charset="utf-8"></script>
+        <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleAnimator.js" charset="utf-8"></script>
+        <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleScrollArea.js" charset="utf-8"></script>
+        <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleScrollbar.js" charset="utf-8"></script>
+        <script type="text/javascript" src="js/dojo.js" charset="utf-8"></script>
+        <script type="text/javascript" src="js/ReloadButton.js" charset="utf-8"></script>
+        <script type="text/javascript" src="js/LH_Ticket.js" charset="utf-8"></script>
+        <script type="text/javascript" src="js/LH.js" charset="utf-8"></script>
+        <script type="text/javascript" src="js/LH_Widget.js" charset="utf-8"></script>
+        <script type="text/javascript">
+            dojo.addOnLoad(function() {
+                var lhw = new LH_Widget();
+                lhw.init();
+            });
+        </script>
+    </body>
+</html>
